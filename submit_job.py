@@ -10,6 +10,7 @@ def execute_emr_job(label, python_file, input_file, master_type, core_type, num_
             '--ec2-master-instance-type', master_type,
             '--ec2-core-instance-type', core_type,
             '--num-ec2-core-instances', str(num_core_nodes),
+            '--num_ec2-task-instances', '0',
             '--file', 'play_count.txt',
             '--no-output']
 
